@@ -1,19 +1,18 @@
 <template>
   <div class="container">
-    login container
+    <login></login>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+import Login from '@/components/Login.vue'
 export default {
   data () {
     return {
     }
   },
-  created () {
-    console.log(1111111)
-  },
   components: {
+    Login
   }
 }
 </script>
