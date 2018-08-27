@@ -28,10 +28,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [
-        {
-          from: /.*/,
-          to: path.posix.join(config.dev.assetsPublicPath, 'views/index.html')
-        }
+        // {
+        //   from: /.*/,
+        //   to: path.posix.join(config.dev.assetsPublicPath, '/views/index.html')
+        // },
+        /* 子路由跳转重定向 配置开始 */
+        { from: /\/hello$/, to: '/views/index.html' }
+        /* 子路由跳转重定向 配置结束 */
       ]
     },
     hot: true,

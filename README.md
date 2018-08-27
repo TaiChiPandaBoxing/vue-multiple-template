@@ -26,5 +26,18 @@ npm run e2e
 # run all tests
 npm test
 ```
+## Nginx conf
+```
+location / {
+    root   D:\localhost\dist;
+    index  index.html index.htm;
+    # error_page 404 /views/index.html;
+    if (!-e $request_filename) {
+        rewrite ^/views/hello$ /views/index.html last;
+        break;
+    }
+    # try_files $uri $uri/ /dist/views/index.html;
+}
+```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
