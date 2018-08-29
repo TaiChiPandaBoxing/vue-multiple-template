@@ -1,6 +1,7 @@
 # vue-multiple-template
 
 > A Vue.js project
+> 目前没有解决页面层级不同的问题，.html文件要么是一级，要么是二级。
 
 ## Build Setup
 
